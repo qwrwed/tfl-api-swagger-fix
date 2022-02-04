@@ -977,7 +977,7 @@
                 "deprecated": false
             }
         },
-        "/Line/{ids}/Status/{StartDate}/to/{EndDate}": {
+        "/Line/{ids}/Status/{startDate}/to/{endDate}": {
             "get": {
                 "tags": [
                     "Line"
@@ -1003,37 +1003,23 @@
                         }
                     },
                     {
-                        "name": "detail",
-                        "in": "query",
-                        "description": "Include details of the disruptions that are causing the line status including the affected stops and routes",
-                        "required": false,
-                        "type": "boolean"
-                    },
-                    {
                         "name": "startDate",
-                        "in": "query",
+                        "in": "path",
                         "required": true,
                         "type": "string"
                     },
                     {
                         "name": "endDate",
-                        "in": "query",
+                        "in": "path",
                         "required": true,
                         "type": "string"
                     },
                     {
-                        "name": "dateRange.startDate",
+                        "name": "detail",
                         "in": "query",
+                        "description": "Include details of the disruptions that are causing the line status including the affected stops and routes",
                         "required": false,
-                        "type": "string",
-                        "format": "date-time"
-                    },
-                    {
-                        "name": "dateRange.endDate",
-                        "in": "query",
-                        "required": false,
-                        "type": "string",
-                        "format": "date-time"
+                        "type": "boolean"
                     }
                 ],
                 "responses": {
