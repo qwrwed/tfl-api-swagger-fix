@@ -2088,16 +2088,18 @@
                     {
                         "name": "lat",
                         "in": "path",
-                        "description": "Format - double. lat is latitude of the centre of the bounding circle.",
+                        "description": "lat is latitude of the centre of the bounding circle.",
                         "required": true,
-                        "type": "string"
+                        "type":"number",
+                        "format":"double"
                     },
                     {
                         "name": "lon",
                         "in": "path",
-                        "description": "Format - double. lon is longitude of the centre of the bounding circle",
+                        "description": "lon is longitude of the centre of the bounding circle",
                         "required": true,
-                        "type": "string"
+                        "type":"number",
+                        "format":"double"
                     }
                 ],
                 "responses": {
