@@ -1593,7 +1593,7 @@
                     "Occupancy"
                 ],
                 "summary": "Gets the occupancy for a car park with a given id",
-                "operationId": "Occupancy_Get",
+                "operationId": "Occupancy_GetByPathId",
                 "consumes": [],
                 "produces": [
                     "application/json",
