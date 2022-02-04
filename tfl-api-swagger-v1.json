@@ -2111,7 +2111,7 @@
                 "deprecated": false
             }
         },
-        "/Place/{type}/overlay/{z}/{Lat}/{Lon}/{width}/{height}": {
+        "/Place/{type}/overlay/{z}/{lat}/{lon}/{width}/{height}": {
             "get": {
                 "tags": [
                     "Place"
@@ -2162,15 +2162,17 @@
                     },
                     {
                         "name": "lat",
-                        "in": "query",
+                        "in": "path",
                         "required": true,
-                        "type": "string"
+                        "type":"number",
+                        "format":"double"
                     },
                     {
                         "name": "lon",
-                        "in": "query",
+                        "in": "path",
                         "required": true,
-                        "type": "string"
+                        "type":"number",
+                        "format":"double"
                     },
                     {
                         "name": "location.lat",
