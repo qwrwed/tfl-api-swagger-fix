@@ -2060,13 +2060,13 @@
                 "deprecated": false
             }
         },
-        "/Place/{type}/At/{Lat}/{Lon}": {
+        "/Place/{type}/At/{lat}/{lon}": {
             "get": {
                 "tags": [
                     "Place"
                 ],
                 "summary": "Gets any places of the given type whose geography intersects the given latitude and longitude. In practice this means the Place\r\n            must be polygonal e.g. a BoroughBoundary.",
-                "operationId": "Place_GetAt",
+                "operationId": "Place_GetAtByPathTypePathLatPathLon",
                 "consumes": [],
                 "produces": [
                     "application/json",
@@ -2087,29 +2087,17 @@
                     },
                     {
                         "name": "lat",
-                        "in": "query",
+                        "in": "path",
+                        "description": "Format - double. lat is latitude of the centre of the bounding circle.",
                         "required": true,
                         "type": "string"
                     },
                     {
                         "name": "lon",
-                        "in": "query",
+                        "in": "path",
+                        "description": "Format - double. lon is longitude of the centre of the bounding circle",
                         "required": true,
                         "type": "string"
-                    },
-                    {
-                        "name": "location.lat",
-                        "in": "query",
-                        "required": true,
-                        "type": "number",
-                        "format": "double"
-                    },
-                    {
-                        "name": "location.lon",
-                        "in": "query",
-                        "required": true,
-                        "type": "number",
-                        "format": "double"
                     }
                 ],
                 "responses": {
