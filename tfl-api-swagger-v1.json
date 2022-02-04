@@ -2284,7 +2284,7 @@
                     "Road"
                 ],
                 "summary": "Gets the road with the specified id (e.g. A1)",
-                "operationId": "Road_Get",
+                "operationId": "Road_GetByPathIds",
                 "consumes": [],
                 "produces": [
                     "application/json",
